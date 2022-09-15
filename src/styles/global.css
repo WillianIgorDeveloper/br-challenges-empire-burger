@@ -2,15 +2,15 @@
     Stylization type: Mobile Frist
 ====================*/
 /*========== REM measure ==========*/
-/* For screens bigger than 1080px: 16px(defalt) */
-/* For screens smaller than 1080px*/
-@media (max-width: 1080px) {
+/* For screens bigger than 1024px: 16px(defalt) */
+/* For screens smaller than 1024px*/
+@media (max-width: 1024px) {
   html {
     font-size: 93.75%; /* 15px */
   }
 }
-/* For screens smaller than 720px*/
-@media (max-width: 720px) {
+/* For screens smaller than 768px*/
+@media (max-width: 768px) {
   html {
     font-size: 87.5%; /* 14px */
   }
@@ -20,7 +20,7 @@
   /*========== Colors ==========*/
   --brown: #1d0605;
   --brown-transparent: #1D060526;
-  --beige-50: #fae2cb;
+  --beige: hsla(29, 82%, 78%, 0.97);
   --black-60: #635352;
   --black-87: #34201F;
   --yellow: #F59A1B;
@@ -43,20 +43,31 @@ img {
   height: auto;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /*========== Header ==========*/
 .header-navbar {
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
   width: 100%;
   height: 4rem;
+  position: fixed;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.header-navbar .container {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .header-navbar .logo-img {
-  width: 16.25rem;
+  width: 14rem;
 }
 .header-navbar .ph-list {
   padding: 0.25rem;
@@ -69,11 +80,13 @@ img {
   cursor: pointer;
   transform: scale(1.2, 1.2);
 }
+.header-navbar .open-menu.hiden {
+  display: none;
+}
 .header-navbar .menu {
   width: 100%;
   height: 100vh;
   padding: 1rem 1.5rem;
-  overflow: hidden;
   position: fixed;
   top: -1500%;
   right: 0;
@@ -84,7 +97,9 @@ img {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  background-color: var(--beige-50);
+  background-color: var(--beige);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .header-navbar .menu.show {
   top: 0;
@@ -109,7 +124,7 @@ img {
   gap: 2rem;
 }
 .header-navbar .menu .menu-links a {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: var(--black-60);
 }
 .header-navbar .menu .menu-links a:hover {
@@ -125,6 +140,9 @@ img {
   gap: 1.5rem;
   align-items: center;
   border-right: 2px solid var(--red);
+}
+.header-navbar .menu .social-container .social-icon-container a:first-child .social-icon {
+  width: 2.5rem;
 }
 .header-navbar .menu .social-container .social-icon {
   width: 2.5rem;
@@ -147,4 +165,61 @@ img {
   width: 1.25rem;
 }
 
-/*========== # ==========*//*# sourceMappingURL=global.css.map */
+/*========== Home ==========*/
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../public/banner-hero.png");
+}
+
+/*========== # ==========*/
+/*========== For screens bigger than 1024px ==========*/
+@media (min-width: 1024px) {
+  /*========== Header ==========*/
+  .header-navbar .open-menu {
+    display: none;
+  }
+  .header-navbar .container {
+    justify-content: flex-start;
+    gap: 2.5rem;
+    border-bottom: 1px solid rgba(60, 33, 12, 0.1490196078);
+  }
+  .header-navbar .menu {
+    flex: 1;
+    width: unset;
+    height: unset;
+    padding: unset;
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: unset;
+    background-color: unset;
+    backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
+  }
+  .header-navbar .menu .close-menu {
+    display: none;
+  }
+  .header-navbar .menu .menu-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .header-navbar .menu .menu-links a {
+    font-size: 1.25rem;
+    color: var(--black-60);
+  }
+  .header-navbar .menu .menu-links a:hover {
+    font-weight: 700;
+  }
+  .header-navbar .menu .social-container {
+    gap: 1.25rem;
+  }
+  .header-navbar .menu .social-container .social-icon-container {
+    padding-right: 1.25rem;
+  }
+  .header-navbar .menu .social-container a .social-icon {
+    width: 1.75rem;
+  }
+}/*# sourceMappingURL=global.css.map */
