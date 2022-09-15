@@ -18,10 +18,13 @@
 /*========== Variables ==========*/
 :root {
   /*========== Colors ==========*/
-  --brown-50: #1d0605;
-  --brown-50-transparent: #1D060526;
+  --brown: #1d0605;
+  --brown-transparent: #1D060526;
   --beige-50: #fae2cb;
   --black-60: #635352;
+  --black-87: #34201F;
+  --yellow: #F59A1B;
+  --red: #B50B04;
 }
 
 /*========== Global ==========*/
@@ -58,8 +61,8 @@ img {
 .header-navbar .ph-list {
   padding: 0.25rem;
   font-size: 2rem;
-  color: var(--brown-50);
-  background-color: var(--brown-50-transparent);
+  color: var(--brown);
+  background-color: var(--brown-transparent);
   border-radius: 0.25rem;
 }
 .header-navbar .ph-list:hover {
@@ -70,9 +73,12 @@ img {
   width: 100%;
   height: 100vh;
   padding: 1rem 1.5rem;
+  overflow: hidden;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -1500%;
+  right: 0;
+  opacity: 0.2;
+  transition: top 0.5s, opacity 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,12 +86,17 @@ img {
   gap: 5rem;
   background-color: var(--beige-50);
 }
+.header-navbar .menu.show {
+  top: 0;
+  opacity: unset;
+  transition: top 0.5s, opacity 0.5s;
+}
 .header-navbar .menu .ph-x {
   position: absolute;
   top: 1.25rem;
   right: 1.75rem;
   font-size: 2rem;
-  color: var(--brown-50);
+  color: var(--brown);
 }
 .header-navbar .menu .ph-x:hover {
   cursor: pointer;
@@ -104,7 +115,35 @@ img {
 .header-navbar .menu .menu-links a:hover {
   font-weight: 700;
 }
-.header-navbar .menu .social-icon {
+.header-navbar .menu .social-container {
+  display: flex;
+  gap: 2rem;
+}
+.header-navbar .menu .social-container .social-icon-container {
+  padding-right: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border-right: 2px solid var(--red);
+}
+.header-navbar .menu .social-container .social-icon {
+  width: 2.5rem;
+}
+.header-navbar .menu .social-container button {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  color: --black-87;
+}
+.header-navbar .menu .social-container button:hover {
+  cursor: pointer;
+}
+.header-navbar .menu .social-container button img {
   width: 1.25rem;
 }
 

@@ -23,28 +23,31 @@
     <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
   <body>
+    <!--===== Header =====-->
     <header class="header-navbar">
       <img class="logo-img" src="./public/logo.png" alt="Empire-Burger-Logo">
-      <i class="ph-list open-menu"></i>
-      <div class="menu">
-        <i class="ph-x"></i>
+      <i class="ph-list" onclick="handleMenu()"></i>
+      <div id="menu" class="menu">
+        <i class="ph-x" onclick="handleMenu()"></i>
         <nav>
           <ul class="menu-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Promoção</a></li>
-            <li><a href="#">Cardapio</a></li>
-            <li><a href="#">Comentários</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a onclick="handleMenu()" href="#">Home</a></li>
+            <li><a onclick="handleMenu()" href="#">Promoção</a></li>
+            <li><a onclick="handleMenu()" href="#">Cardapio</a></li>
+            <li><a onclick="handleMenu()" href="#">Comentários</a></li>
+            <li><a onclick="handleMenu()" href="#">Contato</a></li>
           </ul>
         </nav>
-        <div>
-          <div>
-            <img class="social-icon" src="public/icons/ifood.svg" alt="ifood">
-            <img class="social-icon" src="public/icons/instagram.svg" alt="instagram">
+        <div class="social-container">
+          <div class="social-icon-container">
+            <a href="#"><img class="social-icon" src="public/icons/ifood.svg" alt="ifood"></a>
+            <a href="#"><img class="social-icon" src="public/icons/instagram.svg" alt="instagram"></a>
           </div>
           <button><img src="public/icons/whatsapp.svg" alt="whatsapp">Contato</button>
         </div>
       </div>
     </header>
+
+    <!--===== Main =====-->
   </body>
 </html>
