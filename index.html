@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!--========== GoogleFonts Pre ==========-->
+    <!--========== GoogleFonts Preconnect ==========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--========== Meta ==========-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +18,33 @@
     <link rel="shortcut icon" href="./public/icons/burger.svg" type="image/x-icon">
     <title>Empire Burger | BRChallenges</title>
     <!--========== GoogleFonts ==========-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!--========== Phosphor Icons ==========-->
+    <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
   <body>
+    <header class="header-navbar">
+      <img class="logo-img" src="./public/logo.png" alt="Empire-Burger-Logo">
+      <i class="ph-list open-menu"></i>
+      <div class="menu">
+        <i class="ph-x"></i>
+        <nav>
+          <ul class="menu-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Promoção</a></li>
+            <li><a href="#">Cardapio</a></li>
+            <li><a href="#">Comentários</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <div>
+            <img class="social-icon" src="public/icons/ifood.svg" alt="ifood">
+            <img class="social-icon" src="public/icons/instagram.svg" alt="instagram">
+          </div>
+          <button><img src="public/icons/whatsapp.svg" alt="whatsapp">Contato</button>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
