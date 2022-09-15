@@ -14,9 +14,10 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 ## 🚀 Tecnologias
 
-- [Item 1](http://localhost:3000/)
-- [Item 2](http://localhost:3000/)
-- [Item 3](http://localhost:3000/)
+<img src="https://img.shields.io/static/v1?label=&message=HTML&CSS&color=0d1117&style=for-the-badge&logo=HTML5"/>
+<img src="https://img.shields.io/static/v1?label=&message=CSS&CSS&color=0d1117&style=for-the-badge&logo=CSS3"/>
+<img src="https://img.shields.io/static/v1?label=&message=SASS&CSS&color=0d1117&style=for-the-badge&logo=Sass"/>
+<img src="https://img.shields.io/static/v1?label=&message=JavaScript&CSS&color=0d1117&style=for-the-badge&logo=JavaScript"/>
 
 ## 📝 Critérios de aceite
 
