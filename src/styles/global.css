@@ -189,7 +189,6 @@ img {
   min-height: 65rem;
   padding: 6.25rem 0;
   position: relative;
-  z-index: -1;
   background-image: url("../../public/banner-mobile.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -221,13 +220,18 @@ img {
 .home .container button {
   margin-top: 1.5rem;
 }
-
-.information-card {
-  width: 80%;
-  margin: 0 10%;
-  padding: 1.5rem;
+.home .container-card {
+  width: 100%;
+  margin: 0 auto;
   position: absolute;
-  bottom: -17rem;
+  bottom: -15rem;
+  display: flex;
+  justify-content: center;
+}
+.home .container-card .information-card {
+  width: 90%;
+  max-width: 1080px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -235,31 +239,31 @@ img {
   box-shadow: 0px 4px 35px rgba(179, 155, 132, 0.3);
   border-radius: 0.75rem;
 }
-.information-card .card-container {
+.home .container-card .information-card .card-container {
   padding-bottom: 1.25rem;
   display: flex;
   gap: 1.5rem;
   align-items: center;
   border-bottom: 1px solid rgba(73, 46, 21, 0.1490196078);
 }
-.information-card .card-container img {
+.home .container-card .information-card .card-container img {
   width: 4rem;
   padding: 0.75rem;
   background-color: var(--beige-50);
   border-radius: 100%;
 }
-.information-card .card-container .text-container strong {
+.home .container-card .information-card .card-container .text-container strong {
   font-family: "Lilita One", cursive;
   font-size: 1.5rem;
   color: var(--brown);
   text-transform: uppercase;
 }
-.information-card .card-container .text-container p {
+.home .container-card .information-card .card-container .text-container p {
   margin-top: 0.5rem;
   color: var(--black-60);
   font-size: 1.25rem;
 }
-.information-card .card-container:last-child {
+.home .container-card .information-card .card-container:last-child {
   border-bottom: unset;
 }
 
@@ -326,5 +330,37 @@ img {
   }
   .header-navbar .menu .social-container a .social-icon {
     width: 1.75rem;
+  }
+  /*========== Home ==========*/
+  .home {
+    min-height: 34.75rem;
+    display: flex;
+    align-items: center;
+    background-image: url("../../public/banner-hero.png");
+  }
+  .home .container {
+    width: 100%;
+  }
+  .home .container-card {
+    bottom: -4rem;
+  }
+  .home .container-card .information-card {
+    flex-direction: row;
+  }
+  .home .container-card .information-card .card-container {
+    flex: 1;
+    padding-bottom: unset;
+    padding-right: 1.25rem;
+    border-bottom: unset;
+    border-right: 1px solid rgba(73, 46, 21, 0.1490196078);
+  }
+  .home .container-card .information-card .card-container .text-container strong {
+    font-size: 1.25rem;
+  }
+  .home .container-card .information-card .card-container .text-container p {
+    font-size: 1rem;
+  }
+  .home .container-card .information-card .card-container:last-child {
+    border-right: unset;
   }
 }/*# sourceMappingURL=global.css.map */
