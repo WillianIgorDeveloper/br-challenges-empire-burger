@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="./public/icons/burger.svg" type="image/x-icon">
     <title>Empire Burger | BRChallenges</title>
     <!--========== GoogleFonts ==========-->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lilita+One&display=swap" rel="stylesheet">
     <!--========== Phosphor Icons ==========-->
     <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
@@ -33,10 +33,10 @@
           <nav>
             <ul class="menu-links">
               <li><a onclick="handleMenu()" href="#Home">Home</a></li>
-              <li><a onclick="handleMenu()" href="#">Promoção</a></li>
-              <li><a onclick="handleMenu()" href="#">Cardapio</a></li>
-              <li><a onclick="handleMenu()" href="#">Comentários</a></li>
-              <li><a onclick="handleMenu()" href="#">Contato</a></li>
+              <li><a onclick="handleMenu()" href="#Promotions">Promoção</a></li>
+              <li><a onclick="handleMenu()" href="#Menu">Cardapio</a></li>
+              <li><a onclick="handleMenu()" href="#Coments">Comentários</a></li>
+              <li><a onclick="handleMenu()" href="#Contact">Contato</a></li>
             </ul>
           </nav>
           <div class="social-container">
@@ -49,11 +49,39 @@
         </div>
       </div>
     </header>
-
     <!--===== Main =====-->
     <main>
+    <!--===== Home =====-->
       <section id="Home" class="home">
-
+        <div class="container">
+          <p>Uma nova experiência!</p>
+          <h1>King <span>burger</span></h1>
+          <p>Para quem tem um <span>Apetite de um REI!</span></p>
+          <button class="btn-red">Comprar Agora</button>
+        </div>
+        <div class="information-card">
+          <div class="card-container">
+            <img src="public/icons/burger.svg" alt="burger">
+            <div class="text-container">
+              <strong>Artesanal</strong>
+              <p>Nossas receitas são feitas com todo cuidado</p>
+            </div>
+          </div>
+          <div class="card-container">
+            <img src="public/icons/headset.svg" alt="headset">
+            <div class="text-container">
+              <strong>Atendimento</strong>
+              <p>Totalmente personalizado</p>
+            </div>
+          </div>
+          <div class="card-container">
+            <img src="public/icons/delivery.svg" alt="delivery">
+            <div class="text-container">
+              <strong>Delivery Speed</strong>
+              <p>Entregamos menos de 30 minutos</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

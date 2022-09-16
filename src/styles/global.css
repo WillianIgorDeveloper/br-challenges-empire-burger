@@ -20,11 +20,15 @@
   /*========== Colors ==========*/
   --brown: #1d0605;
   --brown-transparent: #1D060526;
+  --brown-50: #3B200B;
   --beige: hsla(29, 82%, 78%, 0.97);
+  --beige-50: #FAE2CB;
   --black-60: #635352;
   --black-87: #34201F;
   --yellow: #F59A1B;
-  --red: #B50B04;
+  --red: #F43127;
+  --red-hover: #d32a21;
+  --white: #FFF;
 }
 
 /*========== Global ==========*/
@@ -36,6 +40,7 @@
   text-decoration: none;
   font-weight: 400;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -46,16 +51,30 @@ img {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn-red {
+  background-color: var(--red);
+  color: var(--white);
+  border: unset;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+}
+.btn-red:hover {
+  cursor: pointer;
+  background-color: var(--red-hover);
 }
 
 /*========== Header ==========*/
 .header-navbar {
-  padding: 0 1.5rem;
   width: 100%;
   height: 4rem;
   position: fixed;
+  z-index: 1;
   display: flex;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(238, 238, 238, 0.705);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -88,7 +107,7 @@ img {
   height: 100vh;
   padding: 1rem 1.5rem;
   position: fixed;
-  top: -1500%;
+  top: -3000%;
   right: 0;
   opacity: 0.2;
   transition: top 0.5s, opacity 0.5s;
@@ -139,7 +158,7 @@ img {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  border-right: 2px solid var(--red);
+  border-right: 2px solid #B50B04;
 }
 .header-navbar .menu .social-container .social-icon-container a:first-child .social-icon {
   width: 2.5rem;
@@ -167,12 +186,98 @@ img {
 
 /*========== Home ==========*/
 .home {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../../public/banner-hero.png");
+  min-height: 65rem;
+  padding: 6.25rem 0;
+  position: relative;
+  z-index: -1;
+  background-image: url("../../public/banner-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .container p:first-child {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brown);
+}
+.home .container h1, .home .container h1 span {
+  font-family: "Lilita One", cursive;
+  font-size: 3.25rem;
+  color: var(--brown-50);
+  text-transform: uppercase;
+}
+.home .container h1 span, .home .container h1 span span {
+  color: var(--yellow);
+}
+.home .container p {
+  color: var(--brown);
+}
+.home .container p span {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--yellow);
+  font-weight: 900;
+}
+.home .container button {
+  margin-top: 1.5rem;
+}
+
+.information-card {
+  width: 80%;
+  margin: 0 10%;
+  padding: 1.5rem;
+  position: absolute;
+  bottom: -17rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: var(--white);
+  box-shadow: 0px 4px 35px rgba(179, 155, 132, 0.3);
+  border-radius: 0.75rem;
+}
+.information-card .card-container {
+  padding-bottom: 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(73, 46, 21, 0.1490196078);
+}
+.information-card .card-container img {
+  width: 4rem;
+  padding: 0.75rem;
+  background-color: var(--beige-50);
+  border-radius: 100%;
+}
+.information-card .card-container .text-container strong {
+  font-family: "Lilita One", cursive;
+  font-size: 1.5rem;
+  color: var(--brown);
+  text-transform: uppercase;
+}
+.information-card .card-container .text-container p {
+  margin-top: 0.5rem;
+  color: var(--black-60);
+  font-size: 1.25rem;
+}
+.information-card .card-container:last-child {
+  border-bottom: unset;
 }
 
 /*========== # ==========*/
+/*========== For screens bigger than 640px ==========*/
+@media (min-width: 640px) {
+  /*========== Home ==========*/
+  .home {
+    min-height: 90rem;
+    padding: 8rem 0;
+  }
+  .home .container p:first-child, .home .container p, .home .container button {
+    font-size: 1.5rem;
+  }
+  .home .container h1, .home .container h1 span {
+    font-size: 4.75rem;
+  }
+}
 /*========== For screens bigger than 1024px ==========*/
 @media (min-width: 1024px) {
   /*========== Header ==========*/
