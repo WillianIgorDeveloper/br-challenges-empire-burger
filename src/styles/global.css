@@ -43,6 +43,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #FAF3F2;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -265,6 +269,100 @@ img {
 }
 .home .container-card .information-card .card-container:last-child {
   border-bottom: unset;
+}
+
+/*========== Promotions ==========*/
+.promotions {
+  padding-top: 17rem;
+}
+.promotions h2 {
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  color: var(--brown);
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+.promotions p {
+  color: var(--brown-50);
+  margin-bottom: 1rem;
+}
+.promotions .grid-promotions {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  gap: 0.5rem;
+}
+.promotions .grid-promotions .oferta:first-child strong, .promotions .grid-promotions .oferta:first-child span {
+  color: var(--white);
+}
+.promotions .grid-promotions .oferta {
+  position: relative;
+}
+.promotions .grid-promotions .oferta strong, .promotions .grid-promotions .oferta span {
+  position: absolute;
+  color: var(--brown);
+}
+.promotions .grid-promotions .oferta strong {
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  top: 0.75rem;
+  left: 1.25rem;
+}
+.promotions .grid-promotions .oferta span {
+  font-size: 1.25rem;
+  top: 2.5rem;
+  left: 1.25rem;
+}
+.promotions .card {
+  padding: 1.25rem 1rem;
+  margin: 2.25rem 0 0 0;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background-color: var(--red);
+  border-radius: 0.5rem;
+}
+.promotions .card img {
+  width: 5rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(29, 6, 5, 0.2);
+  border-radius: 100%;
+}
+.promotions .card div {
+  flex: 1;
+  padding-left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(29, 6, 5, 0.4);
+}
+.promotions .card div strong {
+  margin-bottom: 0.25rem;
+  font-family: "Lilita One", cursive;
+  font-size: 1.25rem;
+  color: var(--brown);
+  text-transform: uppercase;
+}
+.promotions .card div p {
+  margin: unset;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+.promotions .instagram-container {
+  margin: 4rem 0;
+  text-align: center;
+}
+.promotions .instagram-container span {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--brown);
+}
+.promotions .instagram-container strong {
+  color: var(--red);
+  text-transform: uppercase;
+  font-family: "Lilita One", cursive;
+  font-size: 2.5rem;
 }
 
 /*========== # ==========*/
