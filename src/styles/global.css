@@ -192,6 +192,7 @@ img {
 .home {
   min-height: 65rem;
   padding: 6.25rem 0;
+  margin-bottom: 11rem;
   position: relative;
   background-image: url("../../public/banner-mobile.png");
   background-position: center;
@@ -273,7 +274,7 @@ img {
 
 /*========== Promotions ==========*/
 .promotions {
-  padding-top: 17rem;
+  padding-top: 6rem;
 }
 .promotions h2 {
   font-family: "Lilita One", cursive;
@@ -314,22 +315,27 @@ img {
   top: 2.5rem;
   left: 1.25rem;
 }
-.promotions .card {
+.promotions .bottom-container {
+  margin: 2.25rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.promotions .bottom-container .card {
   padding: 1.25rem 1rem;
-  margin: 2.25rem 0 0 0;
   display: flex;
   gap: 0.75rem;
   align-items: center;
   background-color: var(--red);
   border-radius: 0.5rem;
 }
-.promotions .card img {
+.promotions .bottom-container .card img {
   width: 5rem;
   padding: 0.75rem 1rem;
   background-color: rgba(29, 6, 5, 0.2);
   border-radius: 100%;
 }
-.promotions .card div {
+.promotions .bottom-container .card div {
   flex: 1;
   padding-left: 0.75rem;
   display: flex;
@@ -337,28 +343,27 @@ img {
   justify-content: center;
   border-left: 1px solid rgba(29, 6, 5, 0.4);
 }
-.promotions .card div strong {
+.promotions .bottom-container .card div strong {
   margin-bottom: 0.25rem;
   font-family: "Lilita One", cursive;
   font-size: 1.25rem;
   color: var(--brown);
   text-transform: uppercase;
 }
-.promotions .card div p {
+.promotions .bottom-container .card div p {
   margin: unset;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--white);
 }
-.promotions .instagram-container {
-  margin: 4rem 0;
+.promotions .bottom-container .instagram-container {
   text-align: center;
 }
-.promotions .instagram-container span {
+.promotions .bottom-container .instagram-container span {
   display: block;
   font-size: 1.25rem;
   color: var(--brown);
 }
-.promotions .instagram-container strong {
+.promotions .bottom-container .instagram-container strong {
   color: var(--red);
   text-transform: uppercase;
   font-family: "Lilita One", cursive;
@@ -378,6 +383,29 @@ img {
   }
   .home .container h1, .home .container h1 span {
     font-size: 4.75rem;
+  }
+  /*========== Promotions ==========*/
+  .promotions .grid-promotions {
+    grid-template-columns: 65% 32.6%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+  }
+  .promotions .grid-promotions .oferta:first-child {
+    grid-area: span 2;
+  }
+  .promotions .bottom-container {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  .promotions .bottom-container .card {
+    width: 35.75rem;
+  }
+  .promotions .bottom-container .instagram-container {
+    text-align: left;
+  }
+  .promotions .bottom-container .instagram-container strong {
+    font-size: 1.75rem;
   }
 }
 /*========== For screens bigger than 1024px ==========*/
@@ -432,6 +460,7 @@ img {
   /*========== Home ==========*/
   .home {
     min-height: 34.75rem;
+    margin-bottom: unset;
     display: flex;
     align-items: center;
     background-image: url("../../public/banner-hero.png");
@@ -460,5 +489,12 @@ img {
   }
   .home .container-card .information-card .card-container:last-child {
     border-right: unset;
+  }
+  /*========== Promotions ==========*/
+  .promotions h2 {
+    font-size: 2rem;
+  }
+  .promotions .card strong {
+    font-size: 1.25rem;
   }
 }/*# sourceMappingURL=global.css.map */
