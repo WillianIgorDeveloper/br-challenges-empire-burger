@@ -270,7 +270,7 @@
 
 /*========== Promotions ==========*/
 .promotions {
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 .promotions h2 {
   font-family: "Lilita One", cursive;
@@ -359,6 +359,7 @@
   margin: unset;
   font-size: 0.9rem;
   color: var(--white);
+  letter-spacing: 0.1rem;
 }
 .promotions .instagram-container {
   margin: 4rem 0;
@@ -388,6 +389,30 @@
   }
   .home .container h1, .home .container h1 span {
     font-size: 4.75rem;
+  }
+  /*========== Promotions ==========*/
+  .promotions h2 {
+    font-size: 2rem;
+  }
+  .promotions .grid-promotions {
+    grid-template-columns: 66% auto;
+    grid-template-rows: auto auto;
+    gap: 1.25rem;
+  }
+  .promotions .grid-promotions .oferta:first-child {
+    grid-area: span 2;
+  }
+  .promotions .grid-promotions .oferta:first-child h3, .promotions .grid-promotions .oferta:first-child .limited {
+    font-size: 1.5rem;
+  }
+  .promotions .grid-promotions .oferta:first-child .limited strong {
+    font-size: 2.5rem;
+  }
+  .promotions .bottom-container .card strong {
+    font-size: 1.5rem;
+  }
+  .promotions .bottom-container .card p {
+    font-size: 1rem;
   }
 }
 /*========== For screens bigger than 1024px ==========*/
@@ -442,6 +467,7 @@
   /*========== Home ==========*/
   .home {
     min-height: 34.75rem;
+    margin-bottom: unset;
     display: flex;
     align-items: center;
     background-image: url("../../public/banner-hero.png");
@@ -470,5 +496,24 @@
   }
   .home .container-card .information-card .card-container:last-child {
     border-right: unset;
+  }
+  /*========== Promotions ==========*/
+  .promotions .bottom-container {
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .promotions .bottom-container .card, .promotions .bottom-container .instagram-container {
+    flex: 1;
+  }
+  .promotions .bottom-container .card, .promotions .bottom-container .instagram-container {
+    margin: unset;
+  }
+  .promotions .bottom-container .instagram-container {
+    text-align: start;
+  }
+  .promotions .bottom-container .instagram-container strong {
+    font-size: 1.75rem;
   }
 }/*# sourceMappingURL=global.css.map */

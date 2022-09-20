@@ -238,7 +238,6 @@
 }
 
 
-
 /*========== Home ==========*/
 .home {
     min-height: 65rem;
@@ -353,10 +352,9 @@
 }
 
 
-
 /*========== Promotions ==========*/
 .promotions {
-    padding-top: 5rem;
+    padding-top: 7rem;
 
     h2 {
         font-family: 'Lilita One', cursive;
@@ -470,6 +468,7 @@
 
                 font-size: .9rem;
                 color: var(--white);
+                letter-spacing: .1rem;
             }
         }
     }
@@ -498,7 +497,6 @@
 
 
 /*========== For screens bigger than 640px ==========*/
-
 @media (min-width: 640px) {
 /*========== Home ==========*/
     .home {
@@ -515,12 +513,47 @@
             }
         }
     }
+
+/*========== Promotions ==========*/
+    .promotions {
+        h2 {
+            font-size: 2rem;
+        }
+
+        .grid-promotions {
+            grid-template-columns: 66% auto;
+            grid-template-rows: auto auto;
+            gap: 1.25rem;
+
+            .oferta:first-child {
+                grid-area: span 2;
+
+                h3, .limited {
+                    font-size: 1.5rem;
+                }
+
+                .limited strong {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .bottom-container {
+            .card {
+                strong {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 
 
-
 /*========== For screens bigger than 1024px ==========*/
-
 @media (min-width: 1024px) {
 /*========== Header ==========*/
     .header-navbar {
@@ -590,6 +623,7 @@
 /*========== Home ==========*/
     .home {
         min-height: 34.75rem;
+        margin-bottom: unset;
 
         display: flex;
         align-items: center;
@@ -627,6 +661,33 @@
             
                 .card-container:last-child {
                     border-right: unset;
+                }
+            }
+        }
+    }
+
+/*========== Promotions ==========*/
+    .promotions {
+        .bottom-container {
+            padding: 4rem 0;
+
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .card, .instagram-container {
+                flex: 1;
+            }
+
+            .card, .instagram-container {
+                margin: unset;
+            }
+
+            .instagram-container {
+                text-align: start;
+
+                strong {
+                    font-size: 1.75rem;
                 }
             }
         }
