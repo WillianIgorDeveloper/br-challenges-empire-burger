@@ -42,23 +42,19 @@
   font-family: "Lato", sans-serif;
   scroll-behavior: smooth;
 }
-
-body {
+* body {
   background-color: #FAF3F2;
 }
-
-img {
+* img {
   width: 100%;
   height: auto;
 }
-
-.container {
+* .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-.btn-red {
+* .btn-red {
   background-color: var(--red);
   color: var(--white);
   border: unset;
@@ -66,7 +62,7 @@ img {
   border-radius: 0.25rem;
   font-weight: 700;
 }
-.btn-red:hover {
+* .btn-red:hover {
   cursor: pointer;
   background-color: var(--red-hover);
 }
@@ -192,6 +188,7 @@ img {
 .home {
   min-height: 65rem;
   padding: 6.25rem 0;
+  margin-bottom: 12rem;
   position: relative;
   background-image: url("../../public/banner-mobile.png");
   background-position: center;
@@ -273,7 +270,7 @@ img {
 
 /*========== Promotions ==========*/
 .promotions {
-  padding-top: 17rem;
+  padding-top: 5rem;
 }
 .promotions h2 {
   font-family: "Lilita One", cursive;
@@ -292,27 +289,38 @@ img {
   grid-template-rows: auto auto auto;
   gap: 0.5rem;
 }
-.promotions .grid-promotions .oferta:first-child strong, .promotions .grid-promotions .oferta:first-child span {
+.promotions .grid-promotions .oferta:first-child h3, .promotions .grid-promotions .oferta:first-child span, .promotions .grid-promotions .oferta:first-child {
   color: var(--white);
 }
 .promotions .grid-promotions .oferta {
   position: relative;
 }
-.promotions .grid-promotions .oferta strong, .promotions .grid-promotions .oferta span {
+.promotions .grid-promotions .oferta h3, .promotions .grid-promotions .oferta span, .promotions .grid-promotions .oferta .limited {
   position: absolute;
-  color: var(--brown);
 }
-.promotions .grid-promotions .oferta strong {
-  font-family: "Lilita One", cursive;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  top: 0.75rem;
+.promotions .grid-promotions .oferta h3, .promotions .grid-promotions .oferta span {
+  color: var(--brown);
   left: 1.25rem;
+  font-size: 1.25rem;
+}
+.promotions .grid-promotions .oferta h3 {
+  top: 0.75rem;
+  text-transform: uppercase;
+  font-family: "Lilita One", cursive;
 }
 .promotions .grid-promotions .oferta span {
+  top: 2rem;
+}
+.promotions .grid-promotions .oferta .limited {
+  bottom: 2rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+}
+.promotions .grid-promotions .oferta .limited strong {
+  display: block;
+  text-transform: uppercase;
   font-size: 1.25rem;
-  top: 2.5rem;
-  left: 1.25rem;
+  font-family: "Lilita One", cursive;
 }
 .promotions .card {
   padding: 1.25rem 1rem;
