@@ -331,6 +331,9 @@
   background-color: var(--red);
   border-radius: 0.5rem;
 }
+.promotions .card.open {
+  background-color: rgb(33, 143, 33);
+}
 .promotions .card img {
   width: 5rem;
   padding: 0.75rem 1rem;
@@ -373,7 +376,6 @@
   font-size: 2.5rem;
 }
 
-/*========== # ==========*/
 /*========== For screens bigger than 640px ==========*/
 @media (min-width: 640px) {
   /*========== Home ==========*/
