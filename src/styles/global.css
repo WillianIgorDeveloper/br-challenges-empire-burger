@@ -362,7 +362,7 @@
   letter-spacing: 0.1rem;
 }
 .promotions .instagram-container {
-  margin: 4rem 0;
+  margin-top: 4rem;
   text-align: center;
 }
 .promotions .instagram-container span {
@@ -375,6 +375,64 @@
   text-transform: uppercase;
   font-family: "Lilita One", cursive;
   font-size: 2.5rem;
+}
+
+/*========== Carte ==========*/
+.carte {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+.carte .frist-container {
+  background-image: url("../../public/banner-menu.png");
+  background-position: top right;
+  background-size: auto;
+}
+.carte .frist-container .container {
+  padding: 2.5rem 0;
+  width: 80%;
+}
+.carte .frist-container .container h2, .carte .frist-container .container span {
+  font-family: "Lilita One", cursive;
+  font-size: 1.5rem;
+  color: var(--brown-50);
+  text-transform: uppercase;
+}
+.carte .frist-container .container h2 span, .carte .frist-container .container span span {
+  padding: 0.25rem;
+  background-color: var(--yellow);
+  border-radius: 12px;
+}
+.carte .frist-container .container p {
+  margin: 0.5rem 0 1rem 0;
+  color: var(--brown);
+}
+.carte .second-container {
+  padding: 3rem 0;
+  background-color: var(--brown-50);
+  color: var(--beige-50);
+}
+.carte .second-container .container h3, .carte .second-container .container span {
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+}
+.carte .second-container .container h3 {
+  margin-bottom: 1.5rem;
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+.carte .second-container .container .carte-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.carte .second-container .container .carte-itens .burger-title {
+  display: flex;
+}
+.carte .second-container .container .carte-itens .burger-title div {
+  flex: 1;
+  margin: 0 3px 3px 3px;
+  border-bottom: 2px dotted var(--beige-50);
 }
 
 /*========== For screens bigger than 640px ==========*/
@@ -413,6 +471,33 @@
   }
   .promotions .bottom-container .card p {
     font-size: 1rem;
+  }
+  /*========== Carte ==========*/
+  .carte {
+    height: 35.75rem;
+    flex-direction: row;
+  }
+  .carte .frist-container, .carte .second-container {
+    flex: 1;
+  }
+  .carte .frist-container {
+    padding-right: 6.25rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .carte .frist-container .container {
+    margin: unset;
+  }
+  .carte .second-container {
+    display: flex;
+    align-items: center;
+  }
+  .carte .second-container .container {
+    margin: unset;
   }
 }
 /*========== For screens bigger than 1024px ==========*/
@@ -515,5 +600,18 @@
   }
   .promotions .bottom-container .instagram-container strong {
     font-size: 1.75rem;
+  }
+  /*========== Carte ==========*/
+  .carte .frist-container .container {
+    width: 30rem;
+  }
+  .carte .frist-container .container h2 {
+    font-size: 2.5rem;
+  }
+  .carte .second-container .container {
+    width: 35rem;
+  }
+  .carte .second-container .container h3 {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=global.css.map */
