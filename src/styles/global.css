@@ -465,6 +465,85 @@
   margin: 0.5rem 0;
   color: var(--brown);
 }
+.coments .our-royalty {
+  padding-top: 4rem;
+}
+.coments .our-royalty h2, .coments .our-royalty p {
+  color: var(--brown);
+}
+.coments .our-royalty h2 {
+  font-family: "Lilita One", cursive;
+  font-size: 1.5rem;
+}
+.coments .our-royalty .swiper {
+  width: 100%;
+  margin-top: 1rem;
+}
+.coments .our-royalty .swiper .swiper-wrapper {
+  margin-bottom: 3rem;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide {
+  width: 20.25rem;
+  height: 12rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: var(--white);
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide p, .coments .our-royalty .swiper .swiper-wrapper .swiper-slide span {
+  color: var(--brown);
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person .img-container {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person .img-container img {
+  position: absolute;
+  width: 5rem;
+  left: -1rem;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person .person-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person .person-description span {
+  font-size: 0.75rem;
+}
+.coments .our-royalty .swiper .swiper-wrapper .swiper-slide .person .person-description span:first-child {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Lilita One", cursive;
+}
+.coments .our-royalty .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--yellow);
+}
+.coments .our-royalty .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 3rem;
+  height: 0.25rem;
+  border-radius: unset;
+}
+
+/*========== Contact ==========*/
+.contact {
+  padding-top: 4rem;
+}
 
 /*========== For screens bigger than 640px ==========*/
 @media (min-width: 640px) {
@@ -537,6 +616,12 @@
   }
   .coments .personalized-service img {
     width: 50%;
+  }
+  .coments .our-royalty h2 {
+    font-size: 2rem;
+  }
+  .coments .our-royalty .swiper .swiper-wrapper .swiper-slide {
+    width: 25rem;
   }
 }
 /*========== For screens bigger than 1024px ==========*/

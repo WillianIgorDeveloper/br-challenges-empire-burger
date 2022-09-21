@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lilita+One&display=swap" rel="stylesheet">
     <!--========== Phosphor Icons ==========-->
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <!--========== Swiper ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   </head>
   <body>
     <!--===== Header =====-->
@@ -153,8 +155,35 @@
             <button class="btn-red">Cardápio Imperial</button>
           </div>
         </div>
-        <div class="our-royalty"></div>
+        <div class="our-royalty">
+          <h2>Nossa realeza</h2>
+          <p>A satisfação de nossos clientes em primeiro lugar!</p>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <div id="swiperWrapper" class="swiper-wrapper">
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+      </section>
+      <!--===== Contact =====-->
+      <section id="Contact" class="contact">
       </section>
     </main>
+
+
+    <!--========== Swiper ==========-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    </script>
   </body>
 </html>

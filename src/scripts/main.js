@@ -1,9 +1,10 @@
+const newDate = new Date();
+
+
 function handleMenu () {
     document.querySelector("#menu").classList.toggle("show")
     document.querySelector("#openMenu").classList.toggle("hiden")
 }
-
-const newDate = new Date();
 
 async function getCarte () {
     const data = await fetch('https://api.brchallenges.com/api/empire-burger/menu')
@@ -28,10 +29,38 @@ async function getCarte () {
     document.querySelector("#carte-itens").innerHTML = carteItens
 }
 
+async function getComents () {
+    const data = await fetch('https://api.brchallenges.com/api/empire-burger/testimonials')
+        .then((response) => { return response.json()})
+
+    let comentsItens = ""
+
+    data.map( data => {
+        comentsItens +=
+        `
+        <div class="swiper-slide">
+            <p>&ldquo;${data.testimonial}&rdquo;</p>
+            <div class="person">
+            <div class="img-container"><img src="${data.image}" alt="profile-image"></div>
+            <div class="person-description">
+                <span>${data.name}</span>
+                <span>${data.age} Anos</span>
+            </div>
+            </div>
+        </div>
+        `
+    })
+
+    document.querySelector("#swiperWrapper").innerHTML = comentsItens
+}
+
+
+
 // DOM Loaded
 document.addEventListener('DOMContentLoaded', () => {
 
     getCarte()
+    getComents()
 
     // Handle open time
     if (
