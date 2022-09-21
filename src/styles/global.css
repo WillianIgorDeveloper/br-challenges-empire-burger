@@ -540,11 +540,34 @@
   border-radius: unset;
 }
 
-/*========== Contact ==========*/
-.contact {
+/*========== Instagram Posts ==========*/
+.instagram-posts {
   padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--brown);
+}
+.instagram-posts h2 {
+  font-family: "Lilita One", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.instagram-posts .posts {
+  margin-top: 1rem;
+  height: 6.25rem;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(235, 235, 235, 0) 20%, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%), url("../../public/instagram-posts-mobile.png");
+}
+.instagram-posts .hashtag {
+  width: 100%;
+  height: 1.5rem;
+  background-image: url("../../public/hashtag.svg");
+  background-position: center;
+  background-size: cover;
 }
 
+/*========== Contact ==========*/
 /*========== For screens bigger than 640px ==========*/
 @media (min-width: 640px) {
   /*========== Home ==========*/
@@ -591,8 +614,6 @@
     flex: 1;
   }
   .carte .frist-container {
-    padding-right: 6.25rem;
-    padding-left: 1rem;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -622,6 +643,14 @@
   }
   .coments .our-royalty .swiper .swiper-wrapper .swiper-slide {
     width: 25rem;
+  }
+  /*========== Instagram Posts ==========*/
+  .instagram-posts h2 {
+    font-size: 2rem;
+  }
+  .instagram-posts .posts {
+    height: 12rem;
+    background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(235, 235, 235, 0) 20%, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%), url("../../public/instagram-posts.png");
   }
 }
 /*========== For screens bigger than 1024px ==========*/
