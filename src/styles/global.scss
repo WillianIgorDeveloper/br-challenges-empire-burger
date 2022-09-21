@@ -518,12 +518,14 @@
     
                 span {
                     padding: .25rem;
-    
+                    font-size: 1.75rem;
+                    white-space: nowrap;
+
                     background-color: var(--yellow);
                     border-radius: 12px;
                 }
             }
-    
+
             p {
                 margin: .5rem 0 1rem 0;
                 color: var(--brown);
@@ -566,6 +568,45 @@
                         border-bottom: 2px dotted var(--beige-50);
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/*========== Coments ==========*/
+.coments {
+    .personalized-service {
+        padding: 4rem 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        border-bottom: 1px solid var(--brown-transparent);
+
+        .text-container {
+            max-width: 22rem;
+
+            h2, span {
+                color: var(--brown);
+                text-transform: uppercase;
+                font-family: 'Lilita One', cursive;
+            }
+    
+            h2 {
+                font-size: 1.5rem;
+                span {
+                    background-color: var(--yellow);
+                    padding: .25rem;
+                    border-radius: 12px;
+                }
+            }
+    
+            p {
+                margin: .5rem 0;
+    
+                color: var(--brown);
             }
         }
     }
@@ -660,6 +701,18 @@
 
             .container {
                 margin: unset;
+            }
+        }
+    }
+
+/*========== Coments ==========*/
+    .coments {
+        .personalized-service {
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                width: 50%;
             }
         }
     }
@@ -824,6 +877,25 @@
 
                 h3 {
                     font-size: 2rem;
+                }
+            }
+        }
+    }
+
+/*========== Coments ==========*/
+    .coments {
+        .personalized-service {
+            gap: 2rem;
+
+            .text-container {
+                max-width: 30rem;
+
+                h2 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
                 }
             }
         }
