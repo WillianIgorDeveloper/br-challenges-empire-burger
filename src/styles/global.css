@@ -72,7 +72,7 @@
   width: 100%;
   height: 4rem;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   background: rgba(238, 238, 238, 0.705);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -568,6 +568,121 @@
 }
 
 /*========== Contact ==========*/
+.contact {
+  padding-top: 2.5rem;
+}
+.contact .delivery {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.contact .delivery .delivery-cards h2 {
+  margin-bottom: 1rem;
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  color: var(--brown);
+  font-size: 1.5rem;
+}
+.contact .delivery .delivery-cards .delivery-card {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.contact .delivery .delivery-cards .delivery-card img {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: var(--beige-50);
+  border-radius: 100%;
+}
+.contact .delivery .delivery-cards .delivery-card .text-container {
+  padding-left: 1.25rem;
+  width: 80%;
+  border-left: 1px solid var(--brown-transparent);
+  color: var(--brown);
+}
+.contact .delivery .delivery-cards .delivery-card .text-container h3 {
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.contact .delivery .delivery-cards .delivery-card .text-container p {
+  font-size: 0.8rem;
+}
+.contact .delivery .delivery-cards .delivery-card:hover {
+  z-index: 1;
+  box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
+}
+.contact .card {
+  margin-bottom: 4rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--red);
+  text-align: center;
+}
+.contact .card .img-container {
+  width: 5.75rem;
+  height: 5.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red-hover);
+  border-radius: 100%;
+}
+.contact .card .img-container img {
+  width: 45%;
+}
+.contact .card .card-container {
+  width: 90%;
+  border-top: 1px solid var(--red-hover);
+}
+.contact .card .card-container .text-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.contact .card .card-container .text-container h3 {
+  margin-top: 0.5rem;
+  color: var(--brown);
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.contact .card .card-container .text-container p {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.contact .card .card-container .text-container p strong {
+  font-weight: 900;
+}
+.contact .card .card-container button {
+  width: 100%;
+  background-color: var(--white);
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.contact .container-text {
+  text-align: center;
+  color: var(--brown);
+}
+.contact .container-text h2 {
+  font-family: "Lilita One", cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
 /*========== For screens bigger than 640px ==========*/
 @media (min-width: 640px) {
   /*========== Home ==========*/
@@ -651,6 +766,48 @@
   .instagram-posts .posts {
     height: 12rem;
     background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(235, 235, 235, 0) 20%, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%), url("../../public/instagram-posts.png");
+  }
+  /*========== Contact ==========*/
+  .contact .delivery {
+    flex-direction: row;
+    align-items: center;
+  }
+  .contact .delivery img {
+    width: 50%;
+  }
+  .contact .delivery .delivery-cards h2 {
+    font-size: 2rem;
+  }
+  .contact .delivery .delivery-cards .delivery-card h3 {
+    font-size: 1.25rem;
+  }
+  .contact .delivery .delivery-cards .delivery-card p {
+    font-size: 1rem;
+  }
+  .contact .card {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .contact .card .card-container {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: unset;
+    border-left: 1px solid var(--red-hover);
+  }
+  .contact .card .card-container .text-container {
+    width: 50%;
+    margin: unset;
+    text-align: start;
+  }
+  .contact .card .card-container button {
+    width: unset;
+    line-height: unset;
+  }
+  .contact .container-text h2 {
+    font-size: 2rem;
   }
 }
 /*========== For screens bigger than 1024px ==========*/
