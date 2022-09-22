@@ -107,7 +107,7 @@
   height: 100vh;
   padding: 1rem 1.5rem;
   position: fixed;
-  top: -3000%;
+  top: -5000%;
   right: 0;
   opacity: 0.2;
   transition: top 0.5s, opacity 0.5s;
