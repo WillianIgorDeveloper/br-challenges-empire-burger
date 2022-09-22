@@ -886,6 +886,8 @@
     }
 
     .container-text {
+        margin-bottom: 1rem;
+        
         text-align: center;
         color: var(--brown);
 
@@ -893,6 +895,92 @@
             font-family: 'Lilita One', cursive;
             text-transform: uppercase;
             font-size: 1.5rem;
+        }
+    }
+
+}
+
+
+/*========== Contact ==========*/
+footer {
+    background-color: var(--white);
+    padding: 1rem 0;
+
+    .container {
+        width: 100%;
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            border-bottom: 1px solid var(--brown-transparent);
+
+            .img-container {
+                width: 100%;
+                padding-bottom: .75rem;
+
+                display: flex;
+                justify-content: center;
+
+                border-bottom: 1px solid var(--brown-transparent);
+                
+                img {
+                    width: 70%;
+                }
+            }
+
+            .ul-links {
+                width: 100%;            
+    
+                .social-ul {
+                    padding: 1rem;
+    
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+    
+                    border-bottom: 1px solid var(--brown-transparent);
+    
+                    img {
+                        width: 2rem;
+                    }
+                }
+
+                .navegation-ul {
+                    padding: 1rem 0;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: .75rem;
+
+                    a {
+                        font-size: 1.25rem;
+                        color: #3A210B;
+
+                        &:hover {
+                            font-weight: 700;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rights-container {
+        text-align: center;
+
+        p {
+            padding-top: .75rem;
+            color: #020E1F4D;
+
+            span {
+                font-weight: 700;
+                color: #020E1FB0;
+            }
         }
     }
 }
@@ -1272,6 +1360,55 @@
 
                 p {
                     font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+/*========== Footer ==========*/
+    footer {
+        .container {
+            .link-container {
+                width: 100%;
+                padding-bottom: 1.25rem;
+
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .img-container {
+                    width: unset;
+                    padding-bottom: unset;
+
+                    border-bottom: unset;
+                    img {
+                        width: 16.5rem;
+                    }
+                }
+
+                .ul-links {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 6.25rem;
+                    align-items: center;
+
+                    .social-ul {
+                        padding: unset;
+                        height: 100%;
+
+                        border-bottom: unset;
+                    }
+
+                    .navegation-ul {
+                        flex-direction: row;
+                        gap: 2rem;
+
+                        border-bottom: unset;
+
+                        a {
+                            font-size: 1.25rem;
+                        }
+                    }
                 }
             }
         }
